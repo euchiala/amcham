@@ -1,3 +1,4 @@
+@import 'EXT:sf_register/Configuration/TypoScript/Fields/Fields.typoscript'
 plugin.tx_sfregister.settings.fields.configuration {
     bnsr {
         partial = Textfield

@@ -1,6 +1,9 @@
 ##############################
 ####     SF REGISTER      ####
 ##############################
+@import 'EXT:sf_register/Configuration/TypoScript/maximal/constants.typoscript'
+@import 'EXT:sf_register/Configuration/TypoScript/minimal/constants.typoscript'
+
 plugin.tx_sfregister {
     view {
         templateRootPath = EXT:amcham_sitepackage/Resources/Private/Templates/Sf_register/
