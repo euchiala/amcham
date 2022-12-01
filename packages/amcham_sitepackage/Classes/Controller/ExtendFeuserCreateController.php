@@ -8,7 +8,7 @@ use Evoweb\SfRegister\Controller\Event\CreateConfirmEvent;
 use \Evoweb\SfRegister\Controller\Event\CreateFormEvent;
 use Evoweb\SfRegister\Controller\Event\CreatePreviewEvent;
 use Evoweb\SfRegister\Controller\Event\CreateSaveEvent;
-use \Goldland\amchamSitepackage\Domain\Model\FrontendUser;
+use Goldland\amchamSitepackage\Domain\Model\FrontendUser;
 use Evoweb\SfRegister\Services\Session;
 use \Psr\Http\Message\ResponseInterface;
 use \TYPO3\CMS\Core\Http\HtmlResponse;
@@ -42,8 +42,6 @@ class ExtendFeuserCreateController extends FeuserCreateController
 
         return $setupResponse ?? new HtmlResponse($this->view->render());
     }
-
-
 
     /**
      * Preview action

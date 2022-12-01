@@ -41,7 +41,7 @@ class FrontendUser extends \Evoweb\SfRegister\Domain\Model\FrontendUser
      *
      * @return  string
      */
-    public function getBnsr()
+    public function getBnsr(): string
     {
         return $this->bnsr;
     }
@@ -53,7 +53,7 @@ class FrontendUser extends \Evoweb\SfRegister\Domain\Model\FrontendUser
      *
      * @return  self
      */
-    public function setBnsr(string $bnsr)
+    public function setBnsr(string $bnsr): string
     {
         $this->bnsr = $bnsr;
 
