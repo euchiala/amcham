@@ -8,7 +8,7 @@ use Evoweb\SfRegister\Controller\Event\CreateConfirmEvent;
 use \Evoweb\SfRegister\Controller\Event\CreateFormEvent;
 use Evoweb\SfRegister\Controller\Event\CreatePreviewEvent;
 use Evoweb\SfRegister\Controller\Event\CreateSaveEvent;
-use Evoweb\SfRegister\Domain\Model\FrontendUser;
+use \Goldland\amchamSitepackage\Domain\Model\FrontendUser;
 use Evoweb\SfRegister\Services\Session;
 use \Psr\Http\Message\ResponseInterface;
 use \TYPO3\CMS\Core\Http\HtmlResponse;
