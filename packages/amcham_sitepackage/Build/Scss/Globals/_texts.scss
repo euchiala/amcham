@@ -1,0 +1,16 @@
+p{
+    font-size: 13px;
+    line-height: 16px;
+    @include media-breakpoint-up(md){
+        font-size: 18px;
+        line-height: 23px;
+    }
+}
+.text{
+    font-size: 13px;
+    line-height: 16px;
+    @include media-breakpoint-up(md){
+        font-size: 18px;
+        line-height: 23px;
+    }
+}

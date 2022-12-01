@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+    <f:layout name="Default" />
+    <f:section name="Main">
+        <main>
+            <!-- Header section-->
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}" />
+        
+            <!-- Main Section -->
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '1'}" />
+            
+            <!-- Footer Section -->
+            
+            <div class="container">
+                <div class="row">
+                    <f:variable name="check">
+                        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '2'}" />
+                    </f:variable>
+                    <f:if condition="{f:if(condition: '{check} != {check -> f:format.crop(maxCharacters: 49, append:\'\')}',  then: ' large')}">
+                        <f:then>
+                            <div class="col-lg-20 col-md-20">
+                                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '2'}" />
+                            </div>
+                            <div class="col-lg-16 col-md-16">
+                                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '3'}" />
+                            </div>
+                        </f:then>
+                        <f:else>
+                            <div class="col-lg-20 col-md-20">
+                                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '1', colPos: '2'}" />
+                            </div>
+                            <div class="col-lg-16 col-md-16">
+                                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '1', colPos: '3'}" />
+                            </div>
+                        </f:else>
+                    </f:if>
+                </div>
+            </div>
+        </main>
+    </f:section>
+</html>

@@ -1,0 +1,36 @@
+/* Bootstrap variables */
+$grid-columns: 36;
+$grid-gutter-width: 40px;
+$grid-gutter-width-mobile: 30px;
+$container-max-widths: (
+        xs: 516px,
+        sm: 687px,
+        md: 880px,
+        lg: 1080px,
+        xl: 1280px
+);
+
+$grid-breakpoints: (
+        tns: 0,
+        tn: 375px,
+        xs: 576px,
+        sm: 767px,
+        md: 960px,
+        lg: 1200px,
+        xl: 1440px
+);
+
+$spacer: 1px;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+@for $i from 0 through 100 {
+  $spacers: map-merge(
+                  (
+                          $i: ($spacer * $i),
+                  ),
+                  $spacers
+  );
+}
+.container-min{
+        max-width: 1280px;
+}

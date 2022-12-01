@@ -1,0 +1,17 @@
+#########################################
+#### CE WIZARD:  shapedtextimageteaser ############
+#########################################
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        amchamsitepackage_shapedtextimageteaser {
+            iconIdentifier = amchamsitepackage-shapedtextimageteaser
+            title = shapedtextimageteaser
+            description = shapedtextimageteaser description
+            tt_content_defValues {
+                CType = amchamsitepackage_shapedtextimageteaser
+            }
+        }
+    }
+    show := addToList(amchamsitepackage_shapedtextimageteaser)
+}

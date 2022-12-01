@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="col-md-6 mb-3 form-check {fieldName}">
+	<div class="register-check-container">
+		<f:form.checkbox property="{fieldName}" id="{fieldName}" value="1" class="register-checkbox" />
+
+		<label for="{fieldName}" class="register-checkbox-label">
+			<f:translate id="{fieldName}" />
+			<f:render partial="Required" arguments="{field: fieldName}" />
+		</label>
+	</div>
+	<f:render partial="FieldError" arguments="{for: 'user', field: fieldName}" />
+</div>
+
+</html>

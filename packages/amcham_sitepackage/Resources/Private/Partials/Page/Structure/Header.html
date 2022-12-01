@@ -1,0 +1,56 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="container">
+    <header class="{data.header_style}">
+        <nav role="navigation">
+            <f:render partial="Structure/TopHeader" arguments="{_all}" />
+            <div class="header-navigation">
+                <div class="container-xl position-relative">
+                    <div class="header-navbar">
+                        <div class="navbar">
+                            <div class="col-auto navbar-logo">
+                                <a href="/amcham/public" class="logo d-flex">
+                                    <div class="desktop-logo">
+                                        <figure class="logo">
+                                            <f:cObject typoscriptObjectPath="lib.logo" />
+                                        </figure>
+                                    </div>
+                                    <div class="mobile-logo">
+                                        <figure class="logo">
+                                            <f:cObject typoscriptObjectPath="lib.logo_mobile" />
+                                        </figure>
+                                    </div>
+                                </a>
+                                <div class="mobile-icon-menu">
+                                    <button class="icon-menu" type="button">
+                                        <div class="icon-menu-open">
+                                            <span class="mobile-menu">MENU</span>
+                                        </div>
+                                        <div class="icon-menu-close ">
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <ul class="navbar-menu">
+                                    <f:for each="{mainnavigation}" as="mainnavigationItem" iteration="i">
+                                        <li
+                                            class="{f:if(condition: '({mainnavigationItem.active} && {mainnavigationItem.data.shortcut} == 0)', then:'active')} {f:if(condition: '({mainnavigationItem.active} && {mainnavigationItem.data.shortcut} && {data.uid} == {settings.pageUids.homePage})', then:'active')}">
+                                            <a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}"
+                                                title="{mainnavigationItem.title}">
+                                                {mainnavigationItem.title}
+                                            </a>
+                                        </li>
+                                    </f:for>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>
+
+
+</html>

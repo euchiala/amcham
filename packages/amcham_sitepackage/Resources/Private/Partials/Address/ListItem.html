@@ -1,0 +1,36 @@
+<div class="row align-items-center">
+    <div class="col-lg-18 col">
+        <div class="teaser-info">
+            <ul>
+                <f:if condition="{address.firstName}">
+                    <li class="name">
+                        {address.firstName} {address.lastName}
+                    </li>
+                </f:if>
+                <f:if condition="{address.description}">
+                    <li class="description">
+                        <f:format.html>{address.description}</f:format.html>
+                    </li> 
+                </f:if>
+                <f:if condition="{address.email}">
+                    <li class="email">
+                        <f:image src="EXT:amcham_sitepackage/Resources/Public/Img/Icons/mail.svg" /> <f:link.email email="{address.email}" />
+                    </li>
+                </f:if>
+                <f:if condition="{address.mobile}">
+                    <li class="phone">
+                        <f:image src="EXT:amcham_sitepackage/Resources/Public/Img/Icons/phone_portrait.svg" />  {address.mobile}
+                    </li>
+                </f:if>
+            </ul>
+        </div>   
+    </div>
+    <div class="col-lg-18 col">
+        <div class="teaser-image">
+            <f:if condition="{address.image}">
+                <f:media file="{address.firstImage}" alt="{address.firstImage.originalResource.alt}"
+                title="{address.fullName}" />
+            </f:if>
+        </div>
+    </div>
+</div>

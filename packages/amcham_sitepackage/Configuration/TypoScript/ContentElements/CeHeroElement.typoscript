@@ -1,0 +1,23 @@
+tt_content.amchamsitepackage_ceheroelement =< lib.contentElement
+tt_content.amchamsitepackage_ceheroelement {
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = CeHeroElement
+    
+    ##########################
+    ### DATA PREPROCESSING ###
+    ##########################
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = image
+            as = image
+        }
+        20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        20 {
+            references.fieldName = assets
+            as = assets
+        }
+    }
+}

@@ -1,0 +1,8 @@
+plugin.tx_sfregister.settings.fields.configuration {
+    bnsr {
+        partial = Textfield
+        backendLabel = LLL:EXT:project/Resources/Private/Language/locallang_db.xlf:bnsr
+        placeholder = Bnsr...
+    }
+}
+

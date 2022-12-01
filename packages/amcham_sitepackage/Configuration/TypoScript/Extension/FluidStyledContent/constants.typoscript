@@ -1,0 +1,4 @@
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'

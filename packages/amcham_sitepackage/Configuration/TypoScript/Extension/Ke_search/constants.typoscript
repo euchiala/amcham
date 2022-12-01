@@ -1,0 +1,12 @@
+################################
+####   		KE SERACH    	####
+################################
+@import 'EXT:ke_search/Configuration/TypoScript/constants.typoscript'
+
+plugin.tx_kesearch {
+	view {
+		templateRootPath = EXT:vossiusbrinkhof_sitepackage/Resources/Private/Templates/Kesearch/
+		partialRootPath = EXT:vossiusbrinkhof_sitepackage/Resources/Private/Partials/Kesearch/
+	}
+	
+}

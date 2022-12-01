@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:register="http://typo3.org/ns/Evoweb/SfRegister/ViewHelpers"
+	data-namespace-typo3-fluid="true">
+	<label for="{fieldName}">
+		<f:translate id="{fieldName}" />
+		<f:render partial="Required" arguments="{field: fieldName}" />
+	</label>
+<div class="register-date-input-row">
+	<f:render partial="FieldError" arguments="{for: 'user', field: fieldName}" />
+	
+		<register:form.rangeSelect
+			property="dateOfBirthDay"
+			id="{fieldName}"
+			start="1"
+			end="31"
+			class="register-date-input" />
+		
+		<register:form.rangeSelect
+			property="dateOfBirthMonth"
+			start="1"
+			end="12"
+			class="register-date-input" />
+		
+		<register:form.rangeSelect
+			property="dateOfBirthYear"
+			start="1960"
+			end="2031"
+			class="register-date-input" />
+</div>
+
+</html>

@@ -1,0 +1,83 @@
+/* ------------------------------------
+  Font-weight
+ ------------------------------------ */
+ $font-extra-light: 200;
+ $font-weight-light: 300;
+ $font-weight-regular: 400;
+ $font-weight-medium: 500;
+ $font-weight-semi-bold: 600;
+ $font-weight-bold: 700;
+ $font-weight-extra-bold: 800;
+ $font-weight-very-extra-bold: 900;
+
+/* ------------------------------------
+   Font-styles
+  ------------------------------------ */
+ $font-style-normal: normal;
+ $font-style-italic: italic;
+/* ------------------------------------
+   letter-spacing
+  ------------------------------------ */
+        
+ $letter-spacing-normal: 0;
+ $letter-spacing-small: 0.1px;
+ $letter-spacing-medium: 0.5px;
+
+/* ------------------------------------
+   Desktop Font sizes
+  ------------------------------------ */
+ $font-size-small-0 :14px;
+ $font-size-default-1 :16px;
+ $font-size-default-0 :20px; //p
+ $font-size-medium-1 :25px; 
+ $font-size-large-0 :26px; //h4
+ $font-size-large-1 :34px; // h3
+ $font-size-large-2 :43px; // h2
+ $font-size-large-3 :52px; // h1
+
+/* ------------------------------------
+  Desktop Line Heights
+  ------------------------------------ */
+ $line-height-small-0 :16.8px;
+ $line-height-default-1: 22.4px;
+ $line-height-default-0: 28px; //p
+ $line-height-medium-1 :30px; 
+ $line-height-large-0 : 36.4px; //h4
+ $line-height-large-1 : 40.8px; //h3
+ $line-height-large-2 : 51.6px; //h2
+ $line-height-large-3 : 60px; // h1
+
+/* ------------------------------------
+ Mobile Font sizes
+ ------------------------------------ */
+ $font-size-small-mobile-0: 11px;
+ $font-size-default-mobile-1: 13px;
+ $font-size-default-mobile-0: 16px;//p
+ $font-size-medium-mobile-1: 18px;
+ $font-size-large-mobile-0: 19px;
+ $font-size-large-mobile-1: 22px;//h3
+ $font-size-large-mobile-2: 26px;
+ $font-size-large-mobile-3: 32px;
+ 
+/* ------------------------------------
+ Mobile Line Heights
+ ------------------------------------ */
+ $line-height-small-mobile-0: 14px;
+ $line-height-default-mobile-1: 16px;
+ $line-height-default-mobile-0: 22.4px;//p 
+ $line-height-medium-mobile-1: 23px;
+ $line-height-large-mobile-0: 24px;
+ $line-height-large-mobile-1: 25px;//h3
+ $line-height-large-mobile-2: 30px;
+ $line-height-large-mobile-3: 35px;
+
+/* ------------------------------------
+  Base Variables
+  ------------------------------------ */
+ $font-family-source: 'IBMPlexSans';
+ $font-family-base: $font-family-source;
+ $font-family-IBMPlexSans-regular: 'IBM Plex Sans Regular';
+ $font-family-IBMPlexSans-Condensed-Bold: 'IBM Plex Sans Condensed Bold';
+ $font-family-IBMPlexSans-Condensed-Medium: 'IBM Plex Sans Condensed Medium';
+ $font-family-IBMPlexSans-Condensed-Regular: 'IBM Plex Sans Condensed Regular';
+ $font-family-Calistoga-Regular: 'Calistoga Regular';

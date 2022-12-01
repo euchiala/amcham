@@ -1,0 +1,205 @@
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer-section {
+  background: $color-blue-gradient-3;
+  position: relative;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include media-breakpoint-up(md){
+    flex-direction: column;
+  }
+}
+
+.footer-contact-info-title{
+  color: $color-white;
+  font-family: $font-family-IBMPlexSans-Condensed-Regular;
+  font-weight: $font-weight-bold;
+  font-size: 13px;
+  line-height: 19px;
+  @include media-breakpoint-up(sm){
+    font-size: $font-size-default-0;
+    line-height: $line-height-default-0;
+  }
+}
+.footer-contact-info-others{
+  color: $color-white;
+  font-family: $font-family-IBMPlexSans-Condensed-Regular;
+  font-size: 13px;
+  line-height: 19px;
+  @include media-breakpoint-up(sm){
+    font-size: $font-size-default-0;
+    line-height: $line-height-default-0;
+  }
+}
+.footer-text-item:hover a{
+  color: $color-white;
+  font-family: $font-family-IBMPlexSans-Condensed-Regular;
+  font-size: $font-size-default-0;
+  line-height: $line-height-default-0;
+  text-decoration: underline;
+  padding: 10px 0px 10px 0px;
+}
+.footer-text-item  {
+  color: $color-white;
+  font-family: $font-family-IBMPlexSans-Condensed-Regular;
+  font-size: $font-size-default-0;
+  line-height: $line-height-default-0;
+  text-decoration: underline;
+  padding: 10px 0px 10px 0px;
+}
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  background-color: #3E4A4C;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 44px;
+  border-radius: 50%;
+  display: block;
+}
+.footer-widget-heading h2 {
+  color: $color-white;
+  font-family: $font-family-IBMPlexSans-Condensed-Regular;
+  font-weight: $font-weight-bold;
+  font-size: 15px;
+  line-height: 19px;
+  margin-bottom: 15.5px ;
+  @include media-breakpoint-up(sm){
+    font-size: 22px;
+    line-height:  $line-height-medium-1;
+    margin-bottom: 35.5px;
+  }
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  height: 50px;
+  padding: 14px 28px;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: 1px solid #2e2e2e00;
+  color: $color-gray-800;
+  background-color: $color-white;
+}
+.subscribe-form button {
+  height: 50px;
+  margin-top: 20px;
+  position: absolute;
+  right: 0;
+  background-color: #4382E5;
+  padding: 13px 20px;
+  border: 1px solid #ffffff00;
+  top: 0;
+  color: #FFFFFF;
+  font-family: $font-family-IBMPlexSans-Condensed-Bold;
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 24px;
+  border-radius: 0px 8px 8px 0px;
+}
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+.copyright-area{
+  background: $color-gray-900;
+  padding: 30px 0;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  height: 23px;
+  width: 92px;
+  color: $color-white;
+  font-family: $font-family-IBMPlexSans-Condensed-Regular;
+  font-size: $font-size-default-0;
+  letter-spacing: 0;
+  line-height: $line-height-default-0;
+}
+.footer-menu li a {
+  height: 23px;
+  width: 92px;
+  color: $color-white;
+  font-family: $font-family-IBMPlexSans-Condensed-Regular;
+  font-size: $font-size-default-0;
+  letter-spacing: 0;
+  line-height: $line-height-default-0;
+}
+.social-item{
+      /* padding: 20px; */
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #4D4D4D;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.social-logo{
+  width: 20px;
+}

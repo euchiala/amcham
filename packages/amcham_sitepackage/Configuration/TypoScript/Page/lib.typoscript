@@ -1,0 +1,40 @@
+lib.contentElement {
+   settings {
+      goldland {
+         pageUids {
+             datasecurity = {$pageUids.datasecurity}
+             imprint = {$pageUids.imprint}
+             footernavigation = {$pageUids.footernavigation}
+             home = {$pageUids.home}
+             contact = {$pageUids.contact}
+             newslist = {$pageUids.newslist}
+             newsdetail = {$pageUids.newsdetail}
+             register = {$pageUids.register}
+             login = {$pageUids.login}
+         }
+      }
+   }
+}
+lib{
+   logo = IMAGE
+   logo {
+     file = {$resDir}/Public/Img/Logo/amcham-logo.svg
+      layoutKey = default
+      layout {
+         default {
+            element = <img src="###SRC###" class="header-logo">
+         }
+      }
+   }
+
+   logo_mobile = IMAGE
+   logo_mobile {
+     file = {$resDir}/Public/Img/Logo/amcham-logo.svg
+      layoutKey = default
+      layout {
+         default {
+            element = <img src="###SRC###" class="header-logo">
+         }
+      }
+   }
+}

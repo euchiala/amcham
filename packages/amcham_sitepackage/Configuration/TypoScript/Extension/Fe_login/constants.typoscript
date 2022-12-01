@@ -1,0 +1,4 @@
+##############################
+####        FE LOGIN      ####
+##############################
+@import 'EXT:felogin/Configuration/TypoScript/constants.typoscript'

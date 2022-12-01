@@ -1,0 +1,23 @@
+plugin.tx_amchamsitepackage {
+    settings {
+        pageUids {
+            homePage = {$plugin.tx_amchamsitepackage.settings.pageUids.homePage}
+            cardDetailPid = {$plugin.tx_amchamsitepackage.settings.pageUids.cardDetailPid}
+            imprint = {$plugin.tx_amchamsitepackage.settings.pageUids.imprint}
+            dataProtection = {$plugin.tx_amchamsitepackage.settings.pageUids.dataProtection}
+            search = {$plugin.tx_amchamsitepackage.settings.pageUids.search}
+        }
+    
+        footer {
+            title = {$plugin.tx_amchamsitepackage.settings.footer.title}
+            name = {$plugin.tx_amchamsitepackage.settings.footer.name}
+            subtitle = {$plugin.tx_amchamsitepackage.settings.footer.subtitle}
+            copyright = {$plugin.tx_amchamsitepackage.settings.footer.copyright}
+        }
+        accordiontab {
+            1 = {$plugin.tx_amchamsitepackage.settings.tab.1}
+            2 = {$plugin.tx_amchamsitepackage.settings.tab.2}
+            3 = {$plugin.tx_amchamsitepackage.settings.tab.3}
+        }
+    }
+}

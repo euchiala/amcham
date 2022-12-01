@@ -1,0 +1,81 @@
+.orejime-Notice {
+    // background: $color-blue-gradient-03;
+}
+
+.orejime-Notice--mandatory {
+    min-height: 200px;
+
+    .orejime-Notice-body {
+        height: 100%;
+        padding: 2em;
+
+        .orejime-Notice-title {
+            //@extend h2;
+        }
+
+        .orejime-Notice-description {
+            margin-bottom: 20px;
+            // @extend p;
+        }
+
+    }
+}
+
+.orejime-Modal {
+    //background: $color-blue-gradient-03;
+
+    .orejime-Modal-title {
+        //@extend h2;
+    }
+
+    .orejime-Modal-description {
+        margin-bottom: 20px;
+        //@extend p;
+    }
+
+    .orejime-AppItem-input:checked+.orejime-AppItem-label {
+        .orejime-AppItem-slider {
+            // background: $color-yellow !important;
+        }
+    }
+
+    .orejime-Modal-closeButton {
+        &:hover {
+            background: transparent;
+        }
+    }
+
+    .orejime-CloseIcon {
+        color: $color-white;
+        cursor: pointer;
+    }
+
+    .orejime-Modal-header {
+        border-bottom: 1px solid $color-white;
+    }
+
+    .orejime-Modal-footer {
+        border-top: 1px solid $white;
+    }
+}
+
+.orejime-Button {
+    // @extend a.btn;
+
+    &.orejime-Button--save {
+        // @extend a.btn;
+        //color: $color-blue-800;
+        border: 1px solid $color-white;
+        // background-color: $color-yellow;
+        // box-shadow: 0 0 32px 0 $color-blue-450;
+        padding: 10px 20px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 15px 30px;
+        }
+
+        &:hover {
+            //color: $color-blue-800;
+        }
+    }
+}

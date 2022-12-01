@@ -1,0 +1,46 @@
+################################
+####   		KE SERACH    	####
+################################
+@import 'EXT:ke_search/Configuration/TypoScript/setup.typoscript'
+
+# Plugin configuration
+plugin.tx_kesearch {
+
+	settings {
+		# show the rules
+		displayRules = 0
+
+		# show a link to the advanced search
+		displayAdvancedSearchLink = 0
+
+		# show the number of results
+		displayResultNumber = 0
+
+		# Display exact count
+		exactCount = 1
+		
+		blind {
+			# List of available number of results. First will be used as default.
+			numberOfResults = 5
+		}
+
+		# various crop/offset settings for single result items
+		results {
+			titleCropAfter = 50
+			titleCropSignifier = ...
+			summaryCropAfter = 1000
+			summaryCropSignifier =
+		}
+	}
+
+	view {
+		templateRootPaths {
+			0 = EXT:ke_search/Resources/Private/Templates/
+			10 = {$plugin.tx_kesearch.view.templateRootPath}
+		}
+		partialRootPaths {
+			0 = EXT:ke_search/Resources/Private/Partials/
+			10 = {$plugin.tx_kesearch.view.partialRootPath}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-lg-9 mb-25 mt-25">
+                    <div class="footer-widget">
+                        <div class="footer-text">
+                            <f:link.page pageUid="{settings.goldland.pageUids.meettheteam}" class="footer-text-item">Meet the Team</f:link.page>
+                            <f:link.page pageUid="{settings.goldland.pageUids.press}" class="footer-text-item">Press Room</f:link.page>
+                            <f:link.page pageUid="{settings.goldland.pageUids.jobopenings}" class="footer-text-item">Job Openings</f:link.page>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-15 mb-30 mt-25">
+                        <div class="footer-widget-heading">
+                            <h2>{settings.footer.title}</h2>
+                        </div>
+                        <div class="row">
+                            <f:for each="{settings.footer.office}" as="office" iteration="i">
+                                <div class="col-lg-18 col-auto"> 
+                                    <div class="footer-contact-info-title">{office.title}</div> 
+                                    <div class="footer-contact-info-others">{office.adress}</div> 
+                                    <div class="footer-contact-info-others">{office.adress2}</div> 
+                                    <div class="footer-contact-info-others">{office.phone}</div> 
+                                </div>
+                            </f:for>
+                        </div>
+                </div>
+                <div class="col-lg-12 mb-25 mt-25">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h2>Join our Newsletter</h2>
+                        </div>
+                        <div class="footer-contact-info-others">
+                            Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas sed diam eget risus.
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Ihre e-Mail">
+                                <button>Anmelden</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row" style="justify-content:space-between;">
+                <div class="col-lg-18 col-auto pl-0 pb-10">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><f:link.page pageUid="{settings.goldland.pageUids.meettheteam}" class="footer-text-item">Kontakt</f:link.page></li>
+                            <li><f:link.page pageUid="{settings.goldland.pageUids.press}" class="footer-text-item">Impressum</f:link.page></li>
+                            <li><f:link.page pageUid="{settings.goldland.pageUids.jobopenings}" class="footer-text-item">Datenschutz</f:link.page></li> 
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-18 col-auto">
+                    <div class="row">
+                        <f:for each="{settings.social}" as="social" iteration="i">
+                            <div class="col-lg-9 col-auto">
+                                <span class="social-item">
+                                    <a href="{social.link}" target="_blank"> <f:image src="{social.file}" class="social-logo"/></a>
+                                </span>
+                            </div> 
+                        </f:for>
+                    </div>                        
+                </div> 
+            </div>
+        </div>
+    </div>
+
+</footer>

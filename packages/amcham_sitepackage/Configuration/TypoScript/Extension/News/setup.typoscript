@@ -1,0 +1,70 @@
+// ########################
+// #### News Extension ####
+// ########################
+@import 'EXT:news/Configuration/TypoScript/setup.txt'
+
+plugin.tx_news {
+    mvc.callDefaultActionIfActionCantBeResolved = 1
+    view {
+        templateRootPaths {
+            0 = {$plugin.tx_news.view.templateRootPath}
+            1 = EXT:news/Resources/Private/Templates/
+        }
+        partialRootPaths {
+            0 = {$plugin.tx_news.view.partialRootPath}
+            1 = EXT:news/Resources/Private/Partials/
+        }
+        layoutRootPaths {
+            0 = {$plugin.tx_news.view.layoutRootPath}
+            1 = EXT:news/Resources/Private/Layouts/
+        }
+        widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = EXT:news/Resources/Private/Templates/
+    }
+
+    settings {
+
+        # CUSTOM SETTING
+        categoryListPid = {$plugin.tx_news.settings.categoryListPid}
+
+        # --------------
+        #  Show only news which are not older than 3 years
+        # --------------
+        timeRestriction = -3 years
+
+        # --------------
+        #  List
+        # --------------
+        list {
+            media.image.maxWidth =
+            media.image.maxHeight =
+            # Paginate configuration.
+			paginate {
+                class = GeorgRinger\NumberedPagination\NumberedPagination
+				itemsPerPage = 10
+				insertAbove = 1
+				insertBelow = 1
+				maximumNumberOfLinks = 5
+			}
+        }
+
+
+        # --------------
+        #  Detail
+        # --------------
+        detail {
+            # media configuration
+            media {
+                image {
+                    maxWidth =
+                    maxHeight =
+                }
+
+                video {
+                    width =
+                    height =
+                }
+            }
+        }
+    }
+
+}

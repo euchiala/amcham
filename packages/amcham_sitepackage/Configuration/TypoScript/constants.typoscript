@@ -1,0 +1,50 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:felogin/Configuration/TypoScript/constants.typoscript">
+
+#############################################################
+#### EXTENSIONS                                          ####
+#### Manual inclusion to keep control over loading order ####
+#############################################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/FluidStyledContent/constants.typoscript" condition="extension.isLoaded('fluid_styled_content') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Fe_login/constants.typoscript" condition="extension.isLoaded('fe_login') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Sf_register/constants.typoscript" condition="extension.isLoaded('sf_register') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/News/constants.typoscript" condition="extension.isLoaded('news') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Ke_search/constants.typoscript" condition="extension.isLoaded('ke_search') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Tt_address/constants.typoscript" condition="extension.isLoaded('tt_address') == 1">
+<INCLUDE_TYPOSCRIPT: source="DIR: ./Constants" extensions="typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/Constants/1000_page.typoscript">
+
+###################
+#### PAGE UIDs ####
+###################
+pageUids {
+    datasecurity = 1
+    imprint = 1
+    social = 22
+    home = 1
+    jobopenings = 15
+    meettheteam = 17
+    contact = 12
+    press = 11
+    login = 10
+    search = 9
+}
+footer {
+    title = American Chamber of Commerce in Germany e. V.
+    office {
+        1 {
+            title = Frankfurt Office
+            adress = Börsenplatz 13-15
+            adress2 = 60313 Frankfurt am Main
+            phone = +49 69 929104-0
+        }
+        2 {
+            title = Berlin Office
+            adress = Charlottenstr. 42 
+            adress2 = 10117 Berlin
+            phone = +49 30 2130056-0
+        }
+    }
+}

@@ -1,0 +1,18 @@
+tt_content.amchamsitepackage_textimageteaser =< lib.contentElement
+tt_content.amchamsitepackage_textimageteaser {
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = TextImageTeaser
+    
+    ##########################
+    ### DATA PREPROCESSING ###
+    ##########################
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = image
+            as = image
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file target-language="de" datatype="plaintext" original="messages" date="2020-06-29UTC07:45:380">
+        <header>
+            <authorName>Ingo Möller</authorName>
+            <authorEmail>möller@goldland-media.com</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="male">
+                <target>Herr</target>
+            </trans-unit>
+            <trans-unit id="female">
+                <target>Frau</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

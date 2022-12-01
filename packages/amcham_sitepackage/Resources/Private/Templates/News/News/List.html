@@ -1,0 +1,77 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/List.html
+-->
+
+<f:section name="content">
+	<!--TYPO3SEARCH_end-->
+	<f:if condition="{news}">
+		<f:then>
+			<div class="news-list-view" id="news-container-{contentObjectData.uid}">
+				<div class="container">
+					<f:if condition="{settings.hidePagination}">
+						<f:then>
+							<f:for each="{news}" as="newsItem" iteration="iterator">
+								<f:render partial="List/Item"
+								arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+								
+							</f:for>
+						</f:then>
+						<f:else>
+						
+							<f:if condition="{settings.list.paginate.insertAbove}">
+								<f:render partial="List/Pagination"
+									arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+							</f:if>
+							<h1 class="updates">Latest updates</h1>
+							<div class="row">
+									<div class="col-md-12 mb-24">
+										<f:render partial="List/Item"
+										arguments="{newsItem: pagination.paginator.paginatedItems.0,settings:settings,iterator:iterator}" />
+									</div>
+									<div class="col-md-24 mb-24">
+										<div class="row">
+										<f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+											<f:if condition="{iterator.isFirst}">
+												<f:then>
+													
+												</f:then>
+												<f:else>
+													<div class="col-md-12 mb-24">
+														<f:render partial="List/Item"
+														arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+		
+													</div>
+												</f:else>
+												
+											</f:if>
+										</f:for>
+									</div>
+								</div>
+							
+							</div>
+							<f:if condition="{settings.list.paginate.insertBelow}">
+								<f:render partial="List/Pagination"
+									arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+							</f:if>
+						</f:else>
+					</f:if>
+				</div>
+			</div>
+		</f:then>
+		<f:else>
+			<div class="container">
+				<div class="no-news-found">
+					<f:translate key="list_nonewsfound" />
+				</div>
+			</div>
+
+		</f:else>
+
+	</f:if>
+</f:section>
+
+</html>

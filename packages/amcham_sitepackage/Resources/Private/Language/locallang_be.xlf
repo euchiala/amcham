@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-04-24UTC07:47:560">
+        <header>
+            <authorName>Ingo Möller</authorName>
+            <authorEmail>moeller@goldland-media.com</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="backend_layout.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.normal">
+                <source>Normal</source>
+            </trans-unit>
+              <!-- CE Text Image Teaser  -->
+            <trans-unit id="content_element.textimageteaser">
+                <source>Text Image Teaser</source>
+            </trans-unit>
+            <trans-unit id="content_element.textimageteaser.description">
+                <source>Text Image Teaser description</source>
+            </trans-unit>
+              <!-- CE Hero  -->
+            <trans-unit id="content_element.ceheroelement">
+                <source>Hero</source>
+            </trans-unit>
+            <trans-unit id="content_element.ceheroelement.description">
+                <source>Hero description</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

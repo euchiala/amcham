@@ -1,0 +1,18 @@
+// ########################
+// #### News Extension ####
+// ########################
+@import 'EXT:news/Configuration/TypoScript/constants.txt'
+
+plugin.tx_news {
+    view {
+        templateRootPath = EXT:amcham_sitepackage/Resources/Private/Templates/News/
+        partialRootPath = EXT:amcham_sitepackage/Resources/Private/Partials/News/
+        layoutRootPath = EXT:amcham_sitepackage/Resources/Private/Layouts/
+    }
+
+    settings {
+        # CUSTOM SETTING
+        categoryListPid = 88
+        cssFile = 
+    }
+}

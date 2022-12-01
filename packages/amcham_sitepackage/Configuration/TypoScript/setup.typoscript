@@ -1,0 +1,101 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:felogin/Configuration/TypoScript/setup.typoscript">
+
+######################
+#### EXTENSION ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/FluidStyledContent/setup.typoscript" condition="extension.isLoaded('fluid_styled_content') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Fe_login/setup.typoscript" condition="extension.isLoaded('fe_login') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Sf_register/setup.typoscript" condition="extension.isLoaded('sf_register') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/News/setup.typoscript" condition="extension.isLoaded('news') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Ke_search/setup.typoscript" condition="extension.isLoaded('ke_search') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Tt_address/setup.typoscript" condition="extension.isLoaded('tt_address') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/amcham_sitepackage/setup.typoscript">
+#####################
+#### OVERWRITING ####
+#####################
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:amcham_sitepackage/Configuration/TypoScript/ContentElements/" extensions="typoscript">
+################
+#### HELPER ####
+################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+
+##############
+#### CONFIG ##
+##############
+@import 'EXT:amcham_sitepackage/Configuration/TypoScript/Page/config.typoscript'
+
+##############
+#### PAGE ####
+##############
+@import 'EXT:amcham_sitepackage/Configuration/TypoScript/Page/page.typoscript'
+
+##############
+#### LIB #####
+##############
+@import 'EXT:amcham_sitepackage/Configuration/TypoScript/Page/lib.typoscript'
+
+###################
+#### PAGE UIDs ####
+###################
+#in Template,ContentElements and Plugin available
+#{settings.goldland.pageUids.agb}
+page {
+   10 {
+      settings {
+         goldland {
+            pageUids {
+               datasecurity = {$pageUids.datasecurity}
+               imprint = {$pageUids.imprint}
+               social =  {$pageUids.social}
+               home = {$pageUids.home}
+               contact = {$pageUids.contact}
+               newslist = {$pageUids.newslist}
+               newsdetail = {$pageUids.newsdetail}
+               register = {$pageUids.register}
+               contact = {$pageUids.contact}
+               press = {$pageUids.press}
+               login = {$pageUids.login}
+               search = {$pageUids.search}
+            }
+         }
+         footer {
+            title = {$footer.title}
+            office {
+               1 {
+                     title = {$footer.office.1.title}
+                     adress = {$footer.office.1.adress}
+                     adress2 = {$footer.office.1.adress2}
+                     phone = {$footer.office.1.phone}
+               }
+               2 {
+                     title = {$footer.office.2.title}
+                     adress = {$footer.office.2.adress}
+                     adress2 = {$footer.office.2.adress2}
+                     phone = {$footer.office.2.phone}
+               }
+            }
+         }
+         social {
+            twitter {
+               file = {$resDir}/Public/Img/Logo/twitter.svg
+               link = https://www.twitter.com
+            } 
+            linkedin {
+               file = {$resDir}/Public/Img/Logo/linkedin.svg
+               link = https://www.linkedin.com
+            } 
+            youtube {
+               file = {$resDir}/Public/Img/Logo/youtube.svg
+               link = https://www.youtube.com
+            } 
+            facebook {
+               file = {$resDir}/Public/Img/Logo/facebook.svg
+               link = https://www.facebook.com
+            } 
+         }
+      }
+   }
+}

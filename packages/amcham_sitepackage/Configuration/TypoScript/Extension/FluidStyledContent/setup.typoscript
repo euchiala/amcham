@@ -1,0 +1,28 @@
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/Styling/setup.typoscript'
+
+
+##################################################
+### CONTENT ELEMENT SETTINGS                   ###
+### Shared settings for TYPO3 content elements ###
+##################################################
+lib.contentElement {
+
+    ################
+    ### TEMPLATE ###
+    ################
+    templateRootPaths {
+        50 = EXT:amcham_sitepackage/Resources/Private/Templates/ContentElements/
+    }
+
+    partialRootPaths {
+        50 = EXT:amcham_sitepackage/Resources/Private/Partials/ContentElements/
+    }
+
+    layoutRootPaths {
+        50 = EXT:amcham_sitepackage/Resources/Private/Layouts/ContentElements/
+    }
+}

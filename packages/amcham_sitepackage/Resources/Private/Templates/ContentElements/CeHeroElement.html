@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+    <div class="hero-container">
+        <div class="hero-rectangle">
+            <div class="hero-row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-18" style="z-index: 3;">
+                            <div class="hero-textCol">
+                                <f:if condition="{data.header}">
+                                    <div class="hero-header">{data.header}</div> 
+                                </f:if>
+                                <f:if condition="{data.bodytext}">
+                                    <div class="hero-text">
+                                        <f:format.html><div class="hero-textbody">{data.bodytext}</div></f:format.html>
+                                    </div>
+                                </f:if>
+                                <div class="hero-link">
+                                    <div class="hero-link-btn"><f:link.typolink parameter="{data.link}" target="_blank" class="hero-link-text">{data.link_text}</f:link.typolink></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-18" style="z-index: 2;">
+                            <figure class="hero-img">
+                                <f:image image="{assets.0}" title="{assets.0.properties.title}" alt="{assets.0.properties.alt}"
+                                  treatIdAsReference="1" loading="eager" />
+                              </figure>
+                        </div>
+                    </div>
+          
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+</html>

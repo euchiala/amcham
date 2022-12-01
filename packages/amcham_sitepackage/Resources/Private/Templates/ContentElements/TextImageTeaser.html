@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+  <div class="footer-rectangle">
+    <div class="justify-content-center">
+      <div class="textCol">
+        <f:if condition="{data.title}">
+         <div class="title">{data.title}</div> 
+        </f:if>
+        <f:if condition="{data.bodytext}">
+          <div class="text">
+            <f:format.html><div class="body">{data.bodytext}</div></f:format.html>
+          </div>
+        </f:if>
+      </div>
+      <div class="imageCol">
+        <f:if condition="{image.0}">
+          <figure>
+            <f:image image="{image.0}" maxWidth="1000" title="{image.0.properties.title}" alt="{image.0.properties.alt}"
+              treatIdAsReference="1" loading="eager" class="img"/>
+          </figure>
+        </f:if>
+      </div>
+      <div class="link">
+        <div class="link-btn"><f:link.typolink parameter="{data.link}" target="_blank" class="link-text">{data.link_text}</f:link.typolink></div>
+      
+      </div>
+    </div>
+  </div>
+
+</html>

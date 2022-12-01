@@ -1,0 +1,24 @@
+##############################
+####        FE LOGIN      ####
+##############################
+@import 'EXT:felogin/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:felogin/Configuration/TypoScript/Styling/setup.typoscript'
+
+
+lib.contentElement {
+
+    ################
+    ### TEMPLATE ###
+    ################
+    templateRootPaths {
+        50 = EXT:amacham_sitepackage/Resources/Private/Templates/FeLogin/
+    }
+
+    partialRootPaths {
+        50 = EXT:amacham_sitepackage/Resources/Private/Partials/FeLogin/
+    }
+
+    layoutRootPaths {
+        50 = EXT:amacham_sitepackage/Resources/Private/Layouts/FeLogin/
+    }
+}

@@ -1,0 +1,51 @@
+mod{
+    web_layout{
+        BackendLayouts {
+            mainLayout {
+                title = Main
+                config {
+                    backend_layout {
+                        colCount = 4
+                        rowCount = 3
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Header
+                                        colPos = 0
+                                        colspan = 4
+                                    }
+                                }
+                            }
+                            2 {
+                                columns {
+                                    1 {
+                                        name = Main
+                                        colPos = 1
+                                        colspan = 4
+                                    }
+                                }
+                            }
+                            3 {
+                                columns {
+                                    
+                                    1 {
+                                        name = PreFooter Left side
+                                        colPos = 2
+                                        colspan = 2
+                                    }
+                                    2 {
+                                        name = PreFooter Right side
+                                        colPos = 3
+                                        colspan = 2
+                                    }
+                                
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

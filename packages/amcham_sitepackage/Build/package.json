@@ -1,0 +1,44 @@
+{
+  "name": "empty-sitepackage",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "author": "GOLDLAND",
+  "homepage": "https://bitbucket.org/goldland/amcham_sitepackage",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org:goldland/amcham_sitepackage.git"
+  },
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-strip-css-comments": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-watch": "^5.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "@fancyapps/ui": "^4.0.9",
+    "bootstrap": "^4.6.0",
+    "bootstrap-datepicker": "^1.9.0",
+    "bootstrap-offcanvas": "^1.0.0",
+    "bootstrap-sass": "^3.4.1",
+    "browser-sync": "^2.26.14",
+    "jcf": "^1.2.3",
+    "jquery": "^3.4.1",
+    "jquery-ui": "^1.12.1",
+    "js-cookie": "^2.2.1",
+    "orejime": "^2.1.1",
+    "slick-carousel": "^1.8.1"
+  }
+}

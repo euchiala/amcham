@@ -1,0 +1,10 @@
+##############################
+####     SF REGISTER      ####
+##############################
+plugin.tx_sfregister {
+    view {
+        templateRootPath = EXT:amcham_sitepackage/Resources/Private/Templates/Sf_register/
+        partialRootPath = EXT:amcham_sitepackage/Resources/Private/Partials/Sf_register/
+        layoutRootPath = EXT:amcham_sitepackage/Resources/Private/Layouts/
+    }
+}

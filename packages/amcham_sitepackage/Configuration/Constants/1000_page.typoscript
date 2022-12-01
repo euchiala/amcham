@@ -1,0 +1,38 @@
+############
+### PAGE ###
+############
+page {
+     fluidtemplate {
+        layoutRootPath = EXT:amcham_sitepackage/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:amcham_sitepackage/Resources/Private/Partials/Page/
+        templateRootPath = EXT:amcham_sitepackage/Resources/Private/Templates/Page/
+    }
+    meta {
+        description =
+        author =
+        keywords =
+        viewport = width=device-width, initial-scale=1
+        robots = index,follow
+        apple-mobile-web-app-capable = no
+        compatible = IE=edge
+    }
+    tracking {
+        google {
+            trackingID =
+            anonymizeIp = 1
+        }
+    }
+}
+
+resDir = EXT:amcham_sitepackage/Resources
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+styles {
+    templates {
+        layoutRootPath = EXT:amcham_sitepackage/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:amcham_sitepackage/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:amcham_sitepackage/Resources/Private/Templates/ContentElements/
+    }
+}

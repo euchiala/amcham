@@ -1,0 +1,18 @@
+##############################
+####     TT ADDRESS       ####
+##############################
+plugin.tx_ttaddress {
+    view {
+        templateRootPaths {
+            0 = {$plugin.tx_ttaddress.view.templateRootPath}
+        }
+
+        partialRootPaths {
+            0 = {$plugin.tx_ttaddress.view.partialRootPath}
+        }
+
+        layoutRootPaths {
+            0 = {$plugin.tx_ttaddress.view.layoutRootPath}
+        }
+    }
+}

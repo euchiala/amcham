@@ -1,0 +1,21 @@
+<f:layout name="Default"/>
+
+<f:section name="main">
+    <div class="single-view-rectangle">
+        <f:render section="displayMode_list" arguments="{_all}" />
+    </div>
+</f:section>
+
+<f:section name="displayMode_list">
+ 
+    <!--TYPO3SEARCH_end-->
+       
+        <f:for each="{addresses}" as="address">
+            <f:render partial="ListItem" arguments="{_all}"/>      
+         </f:for>
+     
+     
+    <!--TYPO3SEARCH_begin-->
+</f:section>
+
+
