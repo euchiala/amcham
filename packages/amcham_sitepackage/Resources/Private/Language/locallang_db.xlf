@@ -20,10 +20,6 @@
             <trans-unit id="ceheroelement">
                 <source>Hero</source>
             </trans-unit>
-              <!-- BNSR Field -->
-            <trans-unit id="bnsr">
-                <source>BNSR Field</source>
-            </trans-unit>
         </body>
     </file>
 </xliff>

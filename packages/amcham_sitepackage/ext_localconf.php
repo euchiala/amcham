@@ -11,15 +11,15 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['amcham_sitepackage'] = 'EXT:amcha
  */
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TsConfig/Page/All.tsconfig">');
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['sf_register']['extender'][\Evoweb\SfRegister\Domain\Model\FrontendUser::class]['amchamSitepackage'] = 'EXT:amcham_sitepackage/Classes/Domain/Model/FrontendUser.php';
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\Evoweb\SfRegister\Domain\Repository\FrontendUserRepository::class] = [
-    'className' => \Goldland\amchamSitepackage\Domain\Repository\FrontendUserRepository::class,
-];
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\Evoweb\SfRegister\Controller\FeuserCreateController::class] = [
-    'className' => \Goldland\amchamSitepackage\Controller\ExtendFeuserCreateController::class
-];
+// $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\Evoweb\SfRegister\Domain\Repository\FrontendUserRepository::class] = [
+//     'className' => \Goldland\amchamSitepackage\Domain\Repository\FrontendUserRepository::class,
+// ];
+// $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\Evoweb\SfRegister\Controller\FeuserCreateController::class] = [
+//     'className' => \Goldland\amchamSitepackage\Controller\ExtendFeuserCreateController::class
+// ];
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
-    '@import \' EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Sf_register/Fields.typoscript\''
+    '@import \'EXT:amcham_sitepackage/Configuration/TypoScript/Extension/SfRegister/Fields.typoscript\''
     );
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
-        '@import \'EXT:sf_register/Configuration/TypoScript/Fields.typoscript\''
-        );
+    // \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
+    //     '@import \'EXT:sf_register/Configuration/TypoScript/Fields.typoscript\''
+    //     );

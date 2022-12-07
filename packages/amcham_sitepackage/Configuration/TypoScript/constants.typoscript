@@ -1,15 +1,14 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:felogin/Configuration/TypoScript/constants.typoscript">
 
 #############################################################
 #### EXTENSIONS                                          ####
 #### Manual inclusion to keep control over loading order ####
 #############################################################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/FluidStyledContent/constants.typoscript" condition="extension.isLoaded('fluid_styled_content') == 1">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Fe_login/constants.typoscript" condition="extension.isLoaded('fe_login') == 1">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Sf_register/constants.typoscript" condition="extension.isLoaded('sf_register') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Fe_login/constants.typoscript" condition="extension.isLoaded('felogin') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/SfRegister/constants.typoscript" condition="extension.isLoaded('sf_register') == 1">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/News/constants.typoscript" condition="extension.isLoaded('news') == 1">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Ke_search/constants.typoscript" condition="extension.isLoaded('ke_search') == 1">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Tt_address/constants.typoscript" condition="extension.isLoaded('tt_address') == 1">
@@ -30,6 +29,7 @@ pageUids {
     press = 11
     login = 10
     search = 9
+    forgotPassword = 1
 }
 footer {
     title = American Chamber of Commerce in Germany e. V.

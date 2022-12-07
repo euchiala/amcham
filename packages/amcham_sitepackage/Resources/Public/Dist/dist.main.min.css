@@ -39829,6 +39829,12 @@ p {
     font-size: 18px;
     line-height: 23px; } }
 
+.form-row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
 
 @media (min-width: 1441px) {
   .flex-items {
@@ -41197,6 +41203,57 @@ ul {
   font-family: "IBM Plex Sans Condensed Regular";
   font-size: 18px;
   font-weight: 500;
+  letter-spacing: 0;
+  line-height: 17px; }
+
+.login-message {
+  color: #333333;
+  font-family: "IBM Plex Serif Regular";
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: 29px; }
+
+.login-h1 {
+  color: #0B2650;
+  font-family: "Calistoga Regular";
+  font-size: 50px;
+  letter-spacing: 0;
+  line-height: 58px; }
+
+.forgot-password {
+  color: #4D4D4D;
+  font-family: "IBM Plex Sans Condensed Bold";
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 23px;
+  text-decoration: underline; }
+
+.forgot-password:hover {
+  color: #4D4D4D; }
+
+.login-btn {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 51px;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  background-color: #0B2650; }
+
+.text-top-header {
+  word-break: break-word;
+  font-family: "IBM Plex Sans Condensed Regular";
+  letter-spacing: 0;
+  font-weight: 400; }
+
+.recovery-headline {
+  font-size: 50px;
+  line-height: 58px;
+  color: #0B2650; }
+
+.login-label {
+  color: #000000;
+  font-family: "IBM Plex Sans Condensed Regular";
+  font-size: 13px;
   letter-spacing: 0;
   line-height: 17px; }
 

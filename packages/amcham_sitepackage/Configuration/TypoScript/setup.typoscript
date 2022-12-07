@@ -1,14 +1,13 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:felogin/Configuration/TypoScript/setup.typoscript">
 
 ######################
 #### EXTENSION ####
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/FluidStyledContent/setup.typoscript" condition="extension.isLoaded('fluid_styled_content') == 1">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Fe_login/setup.typoscript" condition="extension.isLoaded('fe_login') == 1">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Sf_register/setup.typoscript" condition="extension.isLoaded('sf_register') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Fe_login/setup.typoscript" condition="extension.isLoaded('felogin') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/SfRegister/setup.typoscript" condition="extension.isLoaded('sf_register') == 1">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/News/setup.typoscript" condition="extension.isLoaded('news') == 1">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Ke_search/setup.typoscript" condition="extension.isLoaded('ke_search') == 1">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Tt_address/setup.typoscript" condition="extension.isLoaded('tt_address') == 1">
@@ -59,6 +58,7 @@ page {
                press = {$pageUids.press}
                login = {$pageUids.login}
                search = {$pageUids.search}
+               forgotPassword = {$pageUids.forgotPassword}
             }
          }
          footer {

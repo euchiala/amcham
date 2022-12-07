@@ -1,0 +1,25 @@
+@import 'EXT:sf_register/Configuration/TypoScript/Fields/setup.typoscript'
+plugin.tx_sfregister.settings.fields.configuration {
+    bnsr {
+        partial = Textfield
+        backendLabel = LLL:EXT:project/Resources/Private/Language/locallang_db.xlf:bnsr
+        placeholder = Bnsr ...
+    }
+    firstName{
+        placeholder = First Name...
+    }
+    lastName{
+        placeholder = Last Name...
+    }
+    password{
+        placeholder = ***********
+    }
+    passwordRepeat{
+        placeholder = ***********
+    }
+}
+plugin.tx_sfregister.settings.validation.create.bnsr {
+        1 = "Evoweb.SfRegister:Required"
+        2 = "StringLength", options={"minimum": 9, "maximum": 9}
+        3 = "Evoweb.SfRegister:BadWord"
+}

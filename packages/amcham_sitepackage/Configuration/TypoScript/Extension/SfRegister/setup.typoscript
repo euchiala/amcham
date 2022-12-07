@@ -1,0 +1,101 @@
+##############################
+####     SF REGISTER      ####
+##############################
+@import 'EXT:amcham_sitepackage/Configuration/TypoScript/Extension/SfRegister/Fields.typoscript'
+@import 'EXT:sf_register/Configuration/TypoScript/maximal/setup.typoscript'
+@import 'EXT:sf_register/Configuration/TypoScript/minimal/setup.typoscript'
+
+plugin.tx_sfregister {
+    view {
+        templateRootPaths.1 = {$plugin.tx_sfregister.view.templateRootPath}
+        partialRootPaths.1 = {$plugin.tx_sfregister.view.partialRootPath}
+        layoutRootPaths.1 = {$plugin.tx_sfregister.view.layoutRootPath}
+    }
+    ### Configuration of sf_register for frontend user registration
+    settings {
+	# General settings
+  		# uses email adress as username (email adress written into field username)
+  		useEmailAddressAsUsername = 1
+  		sitename = Amcham 
+  		# site name used in email subject - thanks for registering at ...
+  		emailSitename = Amcham
+  		useEncryptedFilename = 0
+  	# Assigned user groups
+  		# assigned user group after saving user data on website by user
+  		usergroupPostSave = 1
+  		# assigned user group after confirmation of user registration by user (via email link)
+        usergroupPostConfirm = 2
+  		# assigned user group after acceptance of user registration by admin (via email link)
+        usergroupPostAccept = 3
+  
+	# Required confirmations by mail
+  		# Required confirmation of registration by user after user registered on website (via email link)
+  		# works
+		confirmEmailPostCreate = 1
+  		# Required acceptance of user creation by admin after user creation by user (via email link)
+  		acceptEmailPostCreate = 1
+		# Required confirmation of registration by user after admin accepted registration (via email link)
+  		confirmEmailPostAccept = 1
+  		# Required acceptance of registration by admin after user confirmed registration (via email link)
+		acceptEmailPostConfirm = 1
+  		# Required confirmation of user data change by user (via email link)
+		confirmEmailPostEdit = 0
+		# Required acceptance of user data change by admin after user confirmed data change (via email link)
+  		acceptEmailPostEdit = 0  
+
+  	# Autologin settings
+  		# automatic login of user, after confirmation of registration by user
+  		# works
+        autologinPostConfirmation = 1
+        autologinPostRegistration = 0
+
+	# Notification of user on certain events
+        notifyUser {
+  			createSave = 1
+			createRefuse = 0
+          	createConfirm = 1
+            createAccept = 1
+			createDecline = 0
+          	editSave = 1
+            editConfirm = 1
+			editAccept = 0
+			inviteInvite = 0
+        }
+		# Notification of user on certain events
+		notifyAdmin {
+			# notifies admin, when user saves data on registration / feuser record is created
+          	# works
+          	createSave = 1
+         	# notifies admin, when user confirmed registraion via email link
+			createConfirm = 1
+			createRefuse = 0
+			createAccept = 1
+			createDecline = 0
+          	# notifies admin, when user deletes account
+			deleteSave = 0
+          	# notifies admin, when user cofirms mail to finally delete account
+			deleteConfirm = 0
+			deleteSendLink = 0
+			editSave = 0
+			editConfirm = 0
+			editAccept = 0
+			inviteInvite = 0
+			resendMail = 0
+        }
+        userEmail {
+            fromName =  example
+            fromEmail = example@mail.com   
+        }
+        adminEmail {
+            fromName = admin    
+            fromEmail = admin@mail.com  
+            replyName = admin0
+            replyEmail = admin0@mail.com
+            toName = admin1
+            toEmail = admin1@mail.com  
+        }
+	}
+
+}
+
+

@@ -115,12 +115,12 @@ return [
         ],
     ],
     'MAIL' => [
-        'transport' => 'sendmail',
-        'transport_sendmail_command' => 'C:/laragon/bin/sendmail/sendmail.exe',
-        'transport_smtp_encrypt' => '',
-        'transport_smtp_password' => '',
-        'transport_smtp_server' => '',
-        'transport_smtp_username' => '',
+        'transport' => 'smtp',
+        'transport_sendmail_command' => '',
+        'transport_smtp_encrypt' => false,
+        'transport_smtp_password' => '2a83c23b667fba',
+        'transport_smtp_server' => 'smtp.mailtrap.io:2525',
+        'transport_smtp_username' => 'c0f7158fd8797c',
     ],
     'SYS' => [
         'caching' => [

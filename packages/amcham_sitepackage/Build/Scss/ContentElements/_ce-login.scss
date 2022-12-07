@@ -1,0 +1,50 @@
+.login-message{
+  color: #333333;
+  font-family: $font-family-IBMPlex-Serif-regular;
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: 29px;
+}
+.login-h1{
+    color: #0B2650;
+    font-family: $font-family-Calistoga-Regular;
+    font-size: 50px;
+    letter-spacing: 0;
+    line-height: 58px;
+}
+.forgot-password{
+  color: #4D4D4D;
+  font-family: $font-family-IBMPlexSans-Condensed-Bold;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 23px;
+  text-decoration: underline;
+  &:hover {
+    color:#4D4D4D;
+}
+}
+.login-btn{
+    box-sizing: border-box;
+    height: 51px;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    background-color: #0B2650;
+}
+.text-top-header{
+    word-break: break-word;
+    font-family: $font-family-IBMPlexSans-Condensed-Regular;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+.recovery-headline{
+    font-size: 50px;
+    line-height: 58px;
+    color: #0B2650;
+}
+.login-label{
+    color: #000000;
+    font-family: $font-family-IBMPlexSans-Condensed-Regular;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 17px;
+}
