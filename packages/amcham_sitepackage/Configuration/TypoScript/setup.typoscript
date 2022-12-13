@@ -99,3 +99,22 @@ page {
       }
    }
 }
+plugin.tx_amchamSitepackage_customlist {
+    view {
+        templateRootPaths.0 = EXT:amcham_sitepackage/Resources/Private/Templates/
+        partialRootPaths.0 = EXT:amcham_sitepackage/Resources/Private/Partials/
+        layoutRootPaths.0 = EXT:amcham_sitepackage/Resources/Private/Layouts/
+    }
+    persistence {
+        storagePid = {$plugin.tx_amchamSitepackage_customlist.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}

@@ -1,0 +1,53 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/List.html
+-->
+
+<f:section name="content">
+	<!--TYPO3SEARCH_end-->
+    <div class="news-list-view" id="news-container-{contentObjectData.uid}">
+        <div class="container">
+            <div class="filter-tabs news">
+                <h1 class="updates filter-tittle">
+                    Latest Updates
+                </h1>
+                <ul class="nav nav-tabs right" id="myTab" role="tablist">
+                    <f:debug>{_all}</f:debug>
+                    <li class="nav-item">
+                        <f:link.action pageUid="7" id="profile-tab1" action="grid" controller="News" class="nav-link {f:if(condition: '{class}==\'all\'', then: 'active')}">All</f:link.action>
+                    </li>
+                    <li class="nav-item">
+                        <f:link.action pageUid="7" id="profile-tab1" action="filter" controller="News"  arguments="{categories : categories.2.uid}" class="nav-link {f:if(condition: '{class}==\'Publications\'', then: 'active')}">Publications</f:link.action>
+                    </li>
+                    <li class="nav-item">
+                        <f:link.action pageUid="7" id="profile-tab1" action="filter" controller="News"  arguments="{categories : categories.0.uid}" class="nav-link {f:if(condition: '{class}==\'Podcasts\'', then: 'active')}">Podcasts</f:link.action>
+                    </li>
+                    <li class="nav-item">
+                        <f:link.action pageUid="7" id="profile-tab1" action="filter" controller="News"  arguments="{categories : categories.1.uid}" class="nav-link {f:if(condition: '{class}==\'Videos\'', then: 'active')}">Videos</f:link.action>
+                        <f:comment>
+                            <a class="nav-link" id="profile-tab1" data-toggle="tab"
+                            href="#profile1" role="tab" aria-controls="profile" aria-selected="false">
+                            Videos
+                            <input type="hidden" class="category_id" value="35">
+                            </a>
+                        </f:comment>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <f:for each="{news}" as="newsItem" iteration="iterator">
+                    <div class="col-md-12 mb-24">
+                        <f:render partial="List/GridItem"
+                        arguments="{newsItem: newsItem}"/>
+
+                    </div>
+                </f:for>
+            </div>
+        </div>
+    </div>
+</f:section>
+
+</html>

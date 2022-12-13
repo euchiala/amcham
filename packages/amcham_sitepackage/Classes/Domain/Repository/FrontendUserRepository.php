@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Goldland\amchamSitepackage\Domain\Repository;
+namespace Goldland\AmchamSitepackage\Domain\Repository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings;
 

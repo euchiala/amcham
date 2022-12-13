@@ -4,20 +4,56 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa7140988cc2cbf9f5602a5fc2d7961a",
+    "content-hash": "a55861dca3b291b3fc6c6b589087190a",
     "packages": [
         {
+            "name": "Goldland/events",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/events",
+                "reference": "02f063567b91e65247be53071fc3616c5f67cd52"
+            },
+            "require": {
+                "typo3/cms-core": "^11.5",
+                "typo3/cms-fluid-styled-content": "^11.5",
+                "typo3/cms-rte-ckeditor": "^11.5"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "events"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Goldland\\Events\\": "Classes/"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "displays the list of events",
+            "homepage": "http://amcham.local/amcham/public/",
+            "keywords": [
+                "TYPO3 CMS"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "bacon/bacon-qr-code",
-            "version": "2.0.7",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Bacon/BaconQrCode.git",
-                "reference": "d70c840f68657ce49094b8d91f9ee0cc07fbf66c"
+                "reference": "8674e51bb65af933a5ffaf1c308a660387c35c22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Bacon/BaconQrCode/zipball/d70c840f68657ce49094b8d91f9ee0cc07fbf66c",
-                "reference": "d70c840f68657ce49094b8d91f9ee0cc07fbf66c",
+                "url": "https://api.github.com/repos/Bacon/BaconQrCode/zipball/8674e51bb65af933a5ffaf1c308a660387c35c22",
+                "reference": "8674e51bb65af933a5ffaf1c308a660387c35c22",
                 "shasum": ""
             },
             "require": {
@@ -56,9 +92,9 @@
             "homepage": "https://github.com/Bacon/BaconQrCode",
             "support": {
                 "issues": "https://github.com/Bacon/BaconQrCode/issues",
-                "source": "https://github.com/Bacon/BaconQrCode/tree/2.0.7"
+                "source": "https://github.com/Bacon/BaconQrCode/tree/2.0.8"
             },
-            "time": "2022-03-14T02:02:36+00:00"
+            "time": "2022-12-07T17:46:57+00:00"
         },
         {
             "name": "christian-riesen/base32",
@@ -168,31 +204,34 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "1.13.3",
+            "version": "1.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "648b0343343565c4a056bfc8392201385e8d89f0"
+                "reference": "9e034d7a70032d422169f27d8759e8d84abb4f51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/648b0343343565c4a056bfc8392201385e8d89f0",
-                "reference": "648b0343343565c4a056bfc8392201385e8d89f0",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/9e034d7a70032d422169f27d8759e8d84abb4f51",
+                "reference": "9e034d7a70032d422169f27d8759e8d84abb4f51",
                 "shasum": ""
             },
             "require": {
-                "doctrine/lexer": "1.*",
+                "doctrine/lexer": "^1 || ^2",
                 "ext-tokenizer": "*",
                 "php": "^7.1 || ^8.0",
                 "psr/cache": "^1 || ^2 || ^3"
             },
             "require-dev": {
                 "doctrine/cache": "^1.11 || ^2.0",
-                "doctrine/coding-standard": "^6.0 || ^8.1",
-                "phpstan/phpstan": "^1.4.10 || ^1.8.0",
-                "phpunit/phpunit": "^7.5 || ^8.0 || ^9.1.5",
-                "symfony/cache": "^4.4 || ^5.2",
+                "doctrine/coding-standard": "^9 || ^10",
+                "phpstan/phpstan": "~1.4.10 || ^1.8.0",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "symfony/cache": "^4.4 || ^5.4 || ^6",
                 "vimeo/psalm": "^4.10"
+            },
+            "suggest": {
+                "php": "PHP 8.0 or higher comes with attributes, a native replacement for annotations"
             },
             "type": "library",
             "autoload": {
@@ -235,9 +274,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/annotations/issues",
-                "source": "https://github.com/doctrine/annotations/tree/1.13.3"
+                "source": "https://github.com/doctrine/annotations/tree/1.14.1"
             },
-            "time": "2022-07-02T10:48:51+00:00"
+            "time": "2022-12-12T12:46:12+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -1120,7 +1159,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/amcham_sitepackage",
-                "reference": "d45f194d5350069a0d8b0738c6754388f3edade8"
+                "reference": "ae1408cc8a23b5d4bee7b365a8988713587a50ea"
             },
             "require": {
                 "typo3/cms-core": "^11.5",
@@ -1135,7 +1174,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Goldland\\amchamSitepackage\\": "Classes/"
+                    "Goldland\\AmchamSitepackage\\": "Classes/"
                 }
             },
             "license": [
@@ -7090,16 +7129,16 @@
         },
         {
             "name": "typo3/html-sanitizer",
-            "version": "v2.0.16",
+            "version": "v2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/html-sanitizer.git",
-                "reference": "60bfdc7f9b394d0236e16ee4cea8372a7defa493"
+                "reference": "f8b9c466a08fe4b7bd32b4b8dbde5cf7fbfa9956"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/html-sanitizer/zipball/60bfdc7f9b394d0236e16ee4cea8372a7defa493",
-                "reference": "60bfdc7f9b394d0236e16ee4cea8372a7defa493",
+                "url": "https://api.github.com/repos/TYPO3/html-sanitizer/zipball/f8b9c466a08fe4b7bd32b4b8dbde5cf7fbfa9956",
+                "reference": "f8b9c466a08fe4b7bd32b4b8dbde5cf7fbfa9956",
                 "shasum": ""
             },
             "require": {
@@ -7135,9 +7174,9 @@
             "description": "HTML sanitizer aiming to provide XSS-safe markup based on explicitly allowed tags, attributes and values.",
             "support": {
                 "issues": "https://github.com/TYPO3/html-sanitizer/issues",
-                "source": "https://github.com/TYPO3/html-sanitizer/tree/v2.0.16"
+                "source": "https://github.com/TYPO3/html-sanitizer/tree/v2.1.1"
             },
-            "time": "2022-09-13T07:29:06+00:00"
+            "time": "2022-12-13T08:07:15+00:00"
         },
         {
             "name": "typo3/phar-stream-wrapper",
@@ -7349,7 +7388,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "goldland/amcham-sitepackage": 20
+        "goldland/amcham-sitepackage": 20,
+        "goldland/events": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

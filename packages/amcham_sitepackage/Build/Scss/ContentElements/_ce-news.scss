@@ -78,6 +78,16 @@
         bottom: 25%;
     }
 }
+.news-grid-date{
+    bottom: 15%;
+    left: 12px;
+    color: $color-black;
+    font-family: $font-family-IBMPlexSans-Condensed-Regular;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 17px;
+}
 .news-list-first-title{
     z-index: 1;
     position: absolute;
@@ -108,6 +118,17 @@
     left: 12px;
     width: auto;
     color: $color-white;
+    font-family: $font-family-IBMPlexSans-Condensed-Regular;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 23px;
+}
+.news-grid-title{
+    bottom: 10px;
+    left: 12px;
+    width: auto;
+    color: $color-black;
     font-family: $font-family-IBMPlexSans-Condensed-Regular;
     font-size: 18px;
     font-weight: bold;
@@ -162,4 +183,141 @@
     font-weight: 500;
     letter-spacing: 0;
     line-height: 17px;
+}
+.video-icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #06152D;
+    z-index: 2;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+    &::before{
+        position: absolute;
+        content: "";
+        background-image: url(../Img/Icons/play.svg);
+        height: 15px;
+        width: 15px;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+.podcast-icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #06152D;
+    z-index: 2;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+    &::before{
+        position: absolute;
+        content: "";
+        background-image: url(../Img/Icons/volume-medium.svg);
+        height: 15px;
+        width: 15px;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+.news-grid-tags{
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    left: 62px;
+    height: 30px;
+    width: auto;
+    border-radius: 4px;
+    background-color: #071A36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    @include media-breakpoint-between(md,lg){
+        height: auto;
+    }
+        h3{
+        height: 17px;
+        color: #A5C4F3;
+        font-family: $font-family-IBMPlexSans-Condensed-Regular;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 17px;
+        text-align: center;
+        @include media-breakpoint-between(md,lg){
+            font-size: 11px;
+            height: auto;
+        }
+    }
+}
+.filter-tabs {
+    position: relative;
+}
+
+.filter-tittle {
+    position: absolute;
+    bottom: 3px;
+    margin-bottom: 0;
+}
+ul.nav-tabs {
+    margin-left: 0;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #F1F2F4;
+    justify-content: flex-end;
+}
+.nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+ul.nav-tabs li.nav-item a.nav-link.active {
+    font-weight: 700;
+    background-color: #E5E542;
+    color: #0B2650;
+}
+
+ul.nav-tabs li.nav-item a.nav-link{
+    text-decoration: none;
+    padding: 11px 15px;
+    border: none;
+    margin-bottom: 2px;
+    background-color: #F1F2F4;
+    font-family: $font-family-IBMPlexSans-Condensed-Regular;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    text-transform: uppercase;
+    border-radius: 0;
+    color: $color-black;
+}
+ul.nav-tabs li:last-child.nav-item a{
+    margin-right: 0;
+    border-radius: 0 8px 0 0;
+}
+ul.nav-tabs li:first-child.nav-item a{
+    margin-right: 0;
+    border-radius: 8px 0 0 0;
+}
+.news-grid-teaser{
+  color: #333333;
+  font-family: $font-family-IBMPlexSans-regular;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 23px;
 }

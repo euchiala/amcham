@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers" data-namespace-typo3-fluid="true">
+
+	<div class="newsItem-container">
+		<f:for each="{newsItem.categories}" as="categorie" iteration="i">
+			<f:if condition="{categorie.title}=='Videos'">
+				<f:then>
+					<div class="video-icon">
+                    </div>
+				</f:then>
+				<f:else>
+					<f:if condition="{categorie.title}=='Podcasts'">
+						<div class="podcast-icon">
+						</div>
+					</f:if>
+				</f:else>
+			</f:if>
+		</f:for>
+		<f:if condition="{newsItem.tags}">
+			<!-- Tags -->
+			<span class="news-grid-tags" itemprop="keywords">
+				<f:for each="{newsItem.tags}" as="tag">
+					<h3>{tag.title}</h3>	
+				</f:for>
+			</span>
+		</f:if>
+			<f:image image="{newsItem.falMedia.0}" treatIdAsReference="1" class="news-image"/>
+		<span class="news-grid-date small">
+			<time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+				<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+			</time>
+		</span>
+		<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}"
+			additionalAttributes="{itemprop:'url'}">
+			<span itemprop="headline">
+				<h4 class="news-grid-title">{newsItem.title}</h4>
+			</span>
+		</n:link>
+		<p class="news-grid-teaser">{newsItem.teaser}</p>
+	</div>
+</html>

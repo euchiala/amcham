@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Goldland\\amchamSitepackage\\": "Classes/"
+            "Goldland\\AmchamSitepackage\\": "Classes/"
         }
     }
 }

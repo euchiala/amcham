@@ -33,9 +33,9 @@ plugin.tx_sfregister {
   		# works
 		confirmEmailPostCreate = 1
   		# Required acceptance of user creation by admin after user creation by user (via email link)
-  		acceptEmailPostCreate = 1
+  		acceptEmailPostCreate = 0
 		# Required confirmation of registration by user after admin accepted registration (via email link)
-  		confirmEmailPostAccept = 1
+  		confirmEmailPostAccept = 0
   		# Required acceptance of registration by admin after user confirmed registration (via email link)
 		acceptEmailPostConfirm = 1
   		# Required confirmation of user data change by user (via email link)

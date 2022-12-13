@@ -44,7 +44,7 @@ config {
         # 1. Check Extension title
         #--------------------------------
         altPageTitle {
-            provider = Goldland\amchamSitepackage\PageTitle\PageTitleProvider
+            provider = Goldland\AmchamSitepackage\PageTitle\PageTitleProvider
             after >
             before = record
         }

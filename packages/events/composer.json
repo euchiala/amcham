@@ -1,0 +1,23 @@
+{
+    "name": "Goldland/events",
+    "type": "typo3-cms-extension",
+    "description": "displays the list of events",
+    "homepage": "http://amcham.local/amcham/public/",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "typo3/cms-core": "^11.5",
+        "typo3/cms-rte-ckeditor": "^11.5",
+        "typo3/cms-fluid-styled-content": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Goldland\\Events\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "events"
+        }
+    }
+}

@@ -2,6 +2,6 @@
 
 return [
     'typoscript' => [
-        \Goldland\amchamSitepackage\ExpressionLanguage\ConditionProvider::class
+        \Goldland\AmchamSitepackage\ExpressionLanguage\ConditionProvider::class
     ]
 ];

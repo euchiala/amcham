@@ -26,6 +26,9 @@
             <trans-unit id="content_element.ceheroelement.description">
                 <source>Hero description</source>
             </trans-unit>
+            <trans-unit id="flexforms_general.mode.news_listm" xml:space="preserve">
+				<source>List m view</source>
+			</trans-unit> 
         </body>
     </file>
 </xliff>

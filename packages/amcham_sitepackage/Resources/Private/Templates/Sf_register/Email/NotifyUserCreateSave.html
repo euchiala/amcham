@@ -5,17 +5,35 @@
 <f:layout name="Email" />
 
 <f:section name="Main">
-	<f:format.raw><f:translate id="email_user_salutation"/></f:format.raw>,
+	<a href="/amcham/public" class="logo d-flex">
+		<div class="desktop-logo">
+			<figure class="logo">
+				<img src="http://amcham.local/typo3conf/ext/amcham_sitepackage/Resources/Public/Img/Logo/amcham-logo.svg" alt="">
+			</figure>
+		</div>
+	</a>
+	<div class="text-top-header mt-25 mb-50">
+		<h1 class="recovery-headline">
+			<f:translate id="email_user_salutation"/>, <f:translate id="email_user_account_saved" arguments="{0: user.username}"/>
+		</h1>
+	</div>
+	<f:comment>
+		<f:format.raw><f:translate id="email_user_salutation"/></f:format.raw>,
+		<f:format.raw><f:translate id="email_user_account_saved" arguments="{0: user.username}"/></f:format.raw>
+	</f:comment>
 
-	<f:format.raw><f:translate id="email_user_account_saved" arguments="{0: user.username}"/></f:format.raw>
 
 	<f:if condition="{settings.confirmEmailPostCreate}">
-		<register:link.action arguments="{user: user.uid}" action="confirm" controller="FeuserCreate" absolute="true">
-			<f:translate id="email_user_confirm_link"/>
-		</register:link.action>
-		<register:link.action arguments="{user: user.uid}" action="refuse" controller="FeuserCreate" absolute="true">
-			<f:translate id="email_user_refuse_link"/>
-		</register:link.action>
+		<div class="form-row">
+			<register:link.action arguments="{user: user.uid}" action="confirm" controller="FeuserCreate" absolute="true">
+				<f:translate id="email_user_confirm_link"/>
+			</register:link.action>
+		</div>
+		<div class="form-row">
+			<register:link.action arguments="{user: user.uid}" action="refuse" controller="FeuserCreate" absolute="true">
+				<f:translate id="email_user_refuse_link"/>
+			</register:link.action>
+		</div>
 	</f:if>
 </f:section>
 

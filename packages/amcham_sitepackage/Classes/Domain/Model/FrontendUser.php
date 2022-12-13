@@ -1,5 +1,5 @@
 <?php
-namespace Goldland\amchamSitepackage\Domain\Model;
+namespace Goldland\AmchamSitepackage\Domain\Model;
 
 /***************************************************************
  *  Copyright notice

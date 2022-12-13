@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:events/Resources/Private/Language/locallang_csh_tx_events_domain_model_event.xlf" date="2022-12-13T14:18:05Z" product-name="events">
+		<header/>
+		<body>
+			<trans-unit id="title.description" resname="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="address.description" resname="address.description">
+				<source>address</source>
+			</trans-unit>
+			<trans-unit id="description.description" resname="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="program.description" resname="program.description">
+				<source>program</source>
+			</trans-unit>
+			<trans-unit id="date.description" resname="date.description">
+				<source>date</source>
+			</trans-unit>
+			<trans-unit id="startime.description" resname="startime.description">
+				<source>startime</source>
+			</trans-unit>
+			<trans-unit id="endtime.description" resname="endtime.description">
+				<source>endtime</source>
+			</trans-unit>
+			<trans-unit id="file.description" resname="file.description">
+				<source>file</source>
+			</trans-unit>
+			<trans-unit id="speaker.description" resname="speaker.description">
+				<source>speaker</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,58 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers" data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		Partials/List/Item.html
+		<div class="col-md-6 mb-24">
+		-->
+		<div class="newsItem-container">
+			<f:if condition="{newsItem.tags}">
+					<!-- Tags -->
+					<span class="news-list-tags" itemprop="keywords">
+						<f:for each="{newsItem.tags}" as="tag">
+							<h3>{tag.title}</h3>	
+						</f:for>
+					</span>
+				</f:if>
+				<f:for each="{newsItem.falMedia}" as="media" >
+					<f:if condition="{iterator}==0">
+						<f:then>
+							<f:image image="{media}" treatIdAsReference="1" class="first-news-image"/>
+						</f:then>
+						<f:else>
+							<f:image image="{media}" treatIdAsReference="1" class="news-image"/>
+						</f:else>
+					</f:if>
+				</f:for>
+			
+				<f:if condition="{iterator}==0">
+					<f:then>
+						<span class="news-list-first-date small">
+							<time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+								<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+							</time>
+						</span>
+						<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}"
+							additionalAttributes="{itemprop:'url'}">
+							<span itemprop="headline">
+								<h4 class="news-list-first-title">"{newsItem.title}"</h4>
+							</span>
+						</n:link>
+					</f:then>
+					<f:else>
+						<span class="news-list-date small">
+							<time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+								<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+							</time>
+						</span>
+						<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}"
+							additionalAttributes="{itemprop:'url'}">
+							<span itemprop="headline">
+								<h4 class="news-list-title">"{newsItem.title}"</h4>
+							</span>
+						</n:link>
+					</f:else>
+				</f:if>
+				
+		</div>
+</html>

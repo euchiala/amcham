@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Goldland\amchamSitepackage\ExpressionLanguage;
+namespace Goldland\AmchamSitepackage\ExpressionLanguage;
 
 use TYPO3\CMS\Core\ExpressionLanguage\AbstractProvider;
 use TYPO3\CMS\Core\Utility\GeneralUtility;

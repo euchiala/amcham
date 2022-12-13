@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:events/Resources/Private/Language/locallang_csh_tx_events_domain_model_speaker.xlf" date="2022-12-13T14:18:05Z" product-name="events">
+		<header/>
+		<body>
+			<trans-unit id="image.description" resname="image.description">
+				<source>image</source>
+			</trans-unit>
+			<trans-unit id="position.description" resname="position.description">
+				<source>position</source>
+			</trans-unit>
+			<trans-unit id="address.description" resname="address.description">
+				<source>address</source>
+			</trans-unit>
+			<trans-unit id="email.description" resname="email.description">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="tel.description" resname="tel.description">
+				<source>tel</source>
+			</trans-unit>
+			<trans-unit id="social.description" resname="social.description">
+				<source>social</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

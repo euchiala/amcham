@@ -1,5 +1,5 @@
 <?php
-namespace Goldland\amchamSitepackage\PageTitle;
+namespace Goldland\AmchamSitepackage\PageTitle;
 
 use \TYPO3\CMS\Core\Utility\GeneralUtility;
 use \TYPO3\CMS\Extbase\Object\ObjectManager;
