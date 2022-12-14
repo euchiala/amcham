@@ -1,0 +1,44 @@
+// ########################
+// #### Events Extension ####
+// ########################
+@import 'EXT:events/Configuration/TypoScript/setup.typoscript'
+
+plugin.tx_events_eventlist {
+    view {
+        templateRootPaths {
+            0 = {$plugin.tx_events_eventlist.view.templateRootPath}
+            1 = EXT:events/Resources/Private/Templates/
+        }
+        partialRootPaths {
+            0 = {$plugin.tx_events_eventlist.view.partialRootPath}
+            1 = EXT:events/Resources/Private/Partials/
+        }
+        layoutRootPaths {
+            0 = {$plugin.tx_events_eventlist.view.layoutRootPath}
+            1 = EXT:events/Resources/Private/Layouts/
+        }
+    }
+    persistence {
+        storagePid = {$plugin.tx_events_eventlist.persistence.storagePid}
+    }
+
+}
+plugin.tx_events_speakerlist {
+    view{
+        templateRootPaths {
+            0 = {$plugin.tx_events_speakerlist.view.templateRootPath}
+            1 = EXT:events/Resources/Private/Templates/
+        }
+        partialRootPaths {
+            0 = {$plugin.tx_events_speakerlist.view.partialRootPath}
+            1 = EXT:events/Resources/Private/Partials/
+        }
+        layoutRootPaths {
+            0 = {$plugin.tx_events_speakerlist.view.layoutRootPath}
+            1 = EXT:events/Resources/Private/Layouts/
+        }
+    }
+    persistence {
+        storagePid = {$plugin.tx_events_speakerlist.persistence.storagePid}
+    }
+}

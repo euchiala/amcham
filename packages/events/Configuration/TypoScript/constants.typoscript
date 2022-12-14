@@ -1,56 +1,28 @@
-######################
-#### DEPENDENCIES ####
-######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
-
-
-##############################
-#### FLUID STYLED CONTENT ####
-##############################
-styles {
-    templates {
-        layoutRootPath = EXT:events/Resources/Private/Layouts/ContentElements/
-        partialRootPath = EXT:events/Resources/Private/Partials/ContentElements/
-        templateRootPath = EXT:events/Resources/Private/Templates/ContentElements/
+plugin.tx_events_eventlist {
+    view {
+        # cat=plugin.tx_events_eventlist/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:events/Resources/Private/Templates/
+        # cat=plugin.tx_events_eventlist/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:events/Resources/Private/Partials/
+        # cat=plugin.tx_events_eventlist/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:events/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_events_eventlist//a; type=string; label=Default storage PID
+        storagePid = 34
     }
 }
-
-
-############
-### PAGE ###
-############
-page {
-     fluidtemplate {
-        layoutRootPath = EXT:events/Resources/Private/Layouts/Page/
-        partialRootPath = EXT:events/Resources/Private/Partials/Page/
-        templateRootPath = EXT:events/Resources/Private/Templates/Page/
+plugin.tx_events_speakerlist {
+    view {
+        # cat=plugin.tx_events_speakerlist/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:events/Resources/Private/Templates/
+        # cat=plugin.tx_events_speakerlist/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:events/Resources/Private/Partials/
+        # cat=plugin.tx_events_speakerlist/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:events/Resources/Private/Layouts/
     }
-    meta {
-        description =
-        author =
-        keywords =
-        viewport = width=device-width, initial-scale=1
-        robots = index,follow
-        apple-mobile-web-app-capable = no
-        compatible = IE=edge
+    persistence {
+        # cat=plugin.tx_events_speakerlist//a; type=string; label=Default storage PID
+        storagePid = 34
     }
-    tracking {
-        google {
-            trackingID =
-            anonymizeIp = 1
-        }
-    }
-}
-
-
-##############
-### CONFIG ###
-##############
-config {
-    no_cache = 0
-    removeDefaultJS = 0
-    admPanel = 1
-    prefixLocalAnchors = all
-    headerComment = build by sitepackagebuilder.com
-    sendCacheHeaders = 1
 }

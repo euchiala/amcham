@@ -22,12 +22,12 @@ mod{
                                     1 {
                                         name = Left side
                                         colPos = 1
-                                        colspan = 2
+                                        colspan = 3
                                     }
                                     2 {
                                         name = Right side
                                         colPos = 2
-                                        colspan = 2
+                                        colspan = 1
                                     }
                                 }
                             }

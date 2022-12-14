@@ -11,6 +11,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/News/setup.typoscript" condition="extension.isLoaded('news') == 1">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Ke_search/setup.typoscript" condition="extension.isLoaded('ke_search') == 1">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Tt_address/setup.typoscript" condition="extension.isLoaded('tt_address') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/Events/setup.typoscript" condition="extension.isLoaded('events') == 1">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:amcham_sitepackage/Configuration/TypoScript/Extension/amcham_sitepackage/setup.typoscript">
 #####################
 #### OVERWRITING ####

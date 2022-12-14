@@ -1,203 +1,78 @@
-######################
-#### DEPENDENCIES ####
-######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
-
-
-################
-#### HELPER ####
-################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:events/Configuration/TypoScript/Helper/DynamicContent.typoscript">
-
-
-##############
-#### PAGE ####
-##############
-page = PAGE
-page {
-    typeNum = 0
-    shortcutIcon = EXT:events/Resources/Public/Icons/favicon.ico
-
-    10 = FLUIDTEMPLATE
-    10 {
-        # Template names will be generated automatically by converting the applied
-        # backend_layout, there is no explicit mapping necessary anymore.
-        #
-        # BackendLayout Key
-        # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
-        #
-        # Backend Record
-        # uid: 1 -> 1.html
-        #
-        # Database Entry
-        # value: -1 -> None.html
-        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
-        templateName = TEXT
-        templateName {
-            cObject = TEXT
-            cObject {
-                data = pagelayout
-                required = 1
-                case = uppercamelcase
-                split {
-                    token = pagets__
-                    cObjNum = 1
-                    1.current = 1
-                }
-            }
-            ifEmpty = Default
-        }
-        templateRootPaths {
-            0 = EXT:events/Resources/Private/Templates/Page/
-            1 = {$page.fluidtemplate.templateRootPath}
-        }
-        partialRootPaths {
-            0 = EXT:events/Resources/Private/Partials/Page/
-            1 = {$page.fluidtemplate.partialRootPath}
-        }
-        layoutRootPaths {
-            0 = EXT:events/Resources/Private/Layouts/Page/
-            1 = {$page.fluidtemplate.layoutRootPath}
-        }
-        dataProcessing {
-            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-            10 {
-                references.fieldName = media
-            }
-            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            20 {
-                levels = 2
-                includeSpacer = 1
-                as = mainnavigation
-            }
-        }
+plugin.tx_events_eventlist {
+    view {
+        templateRootPaths.0 = EXT:events/Resources/Private/Templates/Page
+        templateRootPaths.1 = {$plugin.tx_events_eventlist.view.templateRootPath}
+        partialRootPaths.0 = EXT:events/Resources/Private/Partials/Page
+        partialRootPaths.1 = {$plugin.tx_events_eventlist.view.partialRootPath}
+        layoutRootPaths.0 = EXT:events/Resources/Private/Layouts/Page
+        layoutRootPaths.1 = {$plugin.tx_events_eventlist.view.layoutRootPath}
     }
-
-    meta {
-        viewport = {$page.meta.viewport}
-        robots = {$page.meta.robots}
-        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
-        description = {$page.meta.description}
-        description {
-            override.field = description
-        }
-        author = {$page.meta.author}
-        author {
-            override.field = author
-        }
-        keywords = {$page.meta.keywords}
-        keywords {
-            override.field = keywords
-        }
-        X-UA-Compatible = {$page.meta.compatible}
-        X-UA-Compatible {
-            attribute = http-equiv
-        }
-
-        # OpenGraph Tags
-        og:title {
-            attribute = property
-            field = title
-        }
-        og:site_name {
-            attribute = property
-            data = TSFE:tmpl|setup|sitetitle
-        }
-        og:description = {$page.meta.description}
-        og:description {
-            attribute = property
-            field = description
-        }
-        og:image {
-            attribute = property
-            stdWrap.cObject = FILES
-            stdWrap.cObject {
-                references {
-                    data = levelfield:-1, media, slide
-                }
-                maxItems = 1
-                renderObj = COA
-                renderObj {
-                    10 = IMG_RESOURCE
-                    10 {
-                        file {
-                            import.data = file:current:uid
-                            treatIdAsReference = 1
-                            width = 1280c
-                            height = 720c
-                        }
-                        stdWrap {
-                            typolink {
-                                parameter.data = TSFE:lastImgResourceInfo|3
-                                returnLast = url
-                                forceAbsoluteUrl = 1
-                            }
-                        }
-                    }
-                }
-            }
-        }
+    persistence {
+        storagePid = {$plugin.tx_events_eventlist.persistence.storagePid}
+        #recursive = 1
     }
-
-    includeCSSLibs {
-
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
     }
-
-    includeCSS {
-        events_layout = EXT:events/Resources/Public/Css/layout.min.css
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
     }
-
-    includeJSLibs {
-
+}
+plugin.tx_events_speakerlist {
+    view {
+        templateRootPaths.0 = EXT:events/Resources/Private/Templates/Page
+        templateRootPaths.1 = {$plugin.tx_events_speakerlist.view.templateRootPath}
+        partialRootPaths.0 = EXT:events/Resources/Private/Partials/Page
+        partialRootPaths.1 = {$plugin.tx_events_speakerlist.view.partialRootPath}
+        layoutRootPaths.0 = EXT:events/Resources/Private/Layouts/Page
+        layoutRootPaths.1 = {$plugin.tx_events_speakerlist.view.layoutRootPath}
     }
-
-    includeJS {
-
+    persistence {
+        storagePid = {$plugin.tx_events_speakerlist.persistence.storagePid}
+        #recursive = 1
     }
-
-    includeJSFooterlibs {
-
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
     }
-
-    includeJSFooter {
-        events_scripts = EXT:events/Resources/Public/JavaScript/Dist/scripts.js
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
     }
 }
 
+# these classes are only used in auto-generated templates
+plugin.tx_events._CSS_DEFAULT_STYLE (
+    textarea.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
 
-################
-#### CONFIG ####
-################
-config {
-    absRefPrefix = auto
-    no_cache = {$config.no_cache}
-    uniqueLinkVars = 1
-    pageTitleFirst = 1
-    linkVars = L
-    prefixLocalAnchors = {$config.prefixLocalAnchors}
-    renderCharset = utf-8
-    metaCharset = utf-8
-    doctype = html5
-    removeDefaultJS = {$config.removeDefaultJS}
-    inlineStyle2TempFile = 1
-    admPanel = {$config.admPanel}
-    debug = 0
-    cache_period = 86400
-    sendCacheHeaders = {$config.sendCacheHeaders}
-    intTarget =
-    extTarget =
-    disablePrefixComment = 1
-    index_enable = 1
-    index_externals = 1
-    index_metatags = 1
-    headerComment = {$config.headerComment}
+    input.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
 
-    // Disable Image Upscaling
-    noScaleUp = 1
+    .tx-events table {
+        border-collapse:separate;
+        border-spacing:10px;
+    }
 
-    // Compression and Concatenation of CSS and JS Files
-    compressJs = 0
-    compressCss = 0
-    concatenateJs = 0
-    concatenateCss = 0
-}
+    .tx-events table th {
+        font-weight:bold;
+    }
+
+    .tx-events table td {
+        vertical-align:top;
+    }
+
+    .typo3-messages .message-error {
+        color:red;
+    }
+
+    .typo3-messages .message-ok {
+        color:green;
+    }
+)

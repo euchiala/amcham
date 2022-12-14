@@ -9,7 +9,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use Goldland\Events\Domain\Repository\EventRepository;
 
 /**
- * This file is part of the "goldland/Events" Extension for TYPO3 CMS.
+ * This file is part of the "Events" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
@@ -41,12 +41,16 @@ class EventController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     /**
      * Action list
      *
-     * @return void
+     * @return string|object|null|void
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchArgumentException
      */
     public function listAction()
     {
-        $events = $this->eventRepository->findAll();
+        $uid=3;
+        $events = $this->eventRepository->findByUid($uid);
+        $event = $this->eventRepository->getAll($uid);
+        debug($this->eventRepository);
+        debug($event);
         $this->view->assign('events', $events);
     }
 

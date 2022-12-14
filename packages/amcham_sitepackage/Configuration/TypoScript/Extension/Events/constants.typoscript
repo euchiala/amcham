@@ -1,0 +1,25 @@
+// ########################
+// #### Events Extension ####
+// ########################
+@import 'EXT:events/Configuration/TypoScript/constants.typoscript'
+
+plugin.tx_events_eventlist {
+    view {
+        templateRootPath = EXT:amcham_sitepackage/Resources/Private/Templates/
+        partialRootPath = EXT:amcham_sitepackage/Resources/Private/Partials/
+        layoutRootPath = EXT:amcham_sitepackage/Resources/Private/Layouts/
+    }
+    persistence {
+        storagePid = 34
+    }
+}
+plugin.tx_events_speakerlist {
+    view {
+        templateRootPath = EXT:amcham_sitepackage/Resources/Private/Templates/
+        partialRootPath = EXT:amcham_sitepackage/Resources/Private/Partials/
+        layoutRootPath = EXT:amcham_sitepackage/Resources/Private/Layouts/
+    }
+    persistence {
+        storagePid = 34
+    }
+}
